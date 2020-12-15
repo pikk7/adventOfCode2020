@@ -53,7 +53,9 @@ def text_check(text):
   if 'hcl' in text:
     try:
       tmp=(text.split('hcl:')[1][:7])
+      
       if(re.search(regex,tmp)):
+        print(tmp)
         hcl=True
     except:
         hcl=False

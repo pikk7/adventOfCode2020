@@ -43,11 +43,14 @@ def search_numbers(array):
     j=0
     while j<len(array):
       #print(sum(array[i:j]))
-      if(int(sum(array[i:j]))==bad_number(inputs,25)):
+      if(int(sum(array[i:j]))==badnum):
         return array[i:j]
       j=j+1
     i=i+1
   return -1
   
-print(max(search_numbers(inputs)))
-print(min(search_numbers(inputs)))
+badnum=bad_number(inputs,25)
+upper=(max(search_numbers(inputs)))
+lower=(min(search_numbers(inputs)))
+
+print(upper+lower)
